@@ -86,6 +86,7 @@ public class V1JobsServlet extends BaseJobsServlet {
             String coordPath = conf.get(OozieClient.COORDINATOR_APP_PATH);
             String bundlePath = conf.get(OozieClient.BUNDLE_APP_PATH);
 
+            //throws BAD_REQUEST exception if no path was specified
             ServletUtilities.ValidateAppPath(wfPath, coordPath, bundlePath);
 
             if (wfPath != null) {
